@@ -25,7 +25,7 @@ public class Car {
     @ManyToOne
     private Company company;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.PERSIST)
     private List<CarDetail> carDetailList;
 
 

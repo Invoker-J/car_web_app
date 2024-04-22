@@ -31,8 +31,7 @@ public class User {
     private String email;
 
     private String password;
-
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.PERSIST)
     private List<Role> role;
 
     public boolean hasRole(RoleName roleName) {

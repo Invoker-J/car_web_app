@@ -43,13 +43,9 @@
 
 <div class="container-fluid">
     <div class="row">
-        <!-- Sidebar -->
         <nav class="col-md-2 col-lg-2 d-none d-md-block bg-white sidebar">
-
             <%@include file="sidebar.jsp" %>
-
         </nav>
-        <!-- Content -->
         <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4">
             <h1>Hello</h1>
             <h4>Hello2</h4>

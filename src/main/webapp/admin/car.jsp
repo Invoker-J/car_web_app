@@ -15,60 +15,8 @@
     <title>Title</title>
     <link rel="stylesheet" href="../static/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for icons -->
-    <style>
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            z-index: 100;
-            padding: 48px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background-color: #f8f9fa;
-        }
-        .sidebar-heading {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .sidebar .nav-link {
-            color: #495057;
-            font-weight: 500;
-        }
-        .sidebar .nav-link:hover {
-            color: #007bff;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
-
-        .button {
-            border: none;
-            border-radius: 5px;
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 25px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            transition-duration: 0.4s;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-    </style>
 </head>
+
 <body>
 
 <%
@@ -77,19 +25,22 @@
 
 <div class="container-fluid">
     <div class="row">
-        <!-- Sidebar -->
         <nav class="col-md-2 col-lg-2 d-none d-md-block bg-white sidebar">
             <%@include file="sidebar.jsp" %>
         </nav>
-
-        <!-- Content -->
-<%--        <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4">--%>
-<%--            <h1>Car page</h1>--%>
-<%--            <h4>helle from car page</h4>--%>
-<%--        </main>--%>
         <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4 col-4 ">
-            <h1>User</h1>
 
+            <div class="container mt-9">
+                <form action="addCar.jsp" class="row align-items-center">
+                    <div class="col">
+                        <h1>User</h1>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-success float-right">Go add car</button>
+                    </div>
+                </form>
+            </div>
+            <br>
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -119,7 +70,11 @@
                                     </ul>
                                 </td>
                                 <td>
-                                    <a class="btn button" href="addDetail.jsp?carId=<%=car.getId()%>">Add details</a>
+                                    <div class="btn-group" role="group">
+                                        <a href="addDetail.jsp?carId=<%=car.getId()%>" class="btn btn-outline-success btn-sm m-1">Add Detail</a>
+                                        <a href="/delete/car?carId=<%=car.getId()%>" class="btn btn-outline-danger btn-sm m-1">Delete</a>
+                                        <a href="updateCar.jsp?carId=<%=car.getId()%>" class="btn btn-outline-primary btn-sm m-1">Update</a>
+                                    </div>
                                 </td>
                             </tr>
                         <% }%>
@@ -127,7 +82,7 @@
             </table>
 
 
-            <a href="addCar.jsp">Go add car</a>
+
         </main>
     </div>
 </div>

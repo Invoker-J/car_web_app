@@ -1,4 +1,4 @@
-package uz.pdp.car_web_app.servlets;
+package uz.pdp.car_web_app.servlets.auth;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

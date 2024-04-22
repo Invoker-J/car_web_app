@@ -36,14 +36,15 @@
         <input type="text" name="value" class="form-control m-3" placeholder="Value">
     </div>
     <button class="btn btn-dark m-3">Add</button>
-    <br>
-    <br>
-    <br>
+
+</form>
+<br>
+<br>
+<br>
     <form action="/admin/detail" method="post">
         <input type="hidden" value="<%=carId%>" name="carId">
         <button class="btn btn-dark">Save Changes</button>
     </form>
-</form>
 
 </body>
 </html>
