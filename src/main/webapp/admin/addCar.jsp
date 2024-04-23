@@ -18,8 +18,7 @@
 <%
     //    Object attachmentId = session.getAttribute("attachmentId");
 
-    CompanyRepo companyRepo = new CompanyRepo();
-    List<Company> companyList = companyRepo.findAll();
+    List<Company> companyList = CompanyRepo.findAll();
 %>
 
 <div class="container mt-5">

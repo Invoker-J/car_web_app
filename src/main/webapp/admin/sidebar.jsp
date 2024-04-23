@@ -10,6 +10,34 @@
 <html>
 <head>
     <title>Title</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <style>
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 100;
+            padding: 48px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+        }
+
+        .sidebar-heading {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .sidebar .nav-link {
+            color: #495057;
+            font-weight: 500;
+        }
+
+        .sidebar .nav-link:hover {
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
 
@@ -36,6 +64,7 @@
             <% } %>
         </ul>
     </div>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
 </html>

@@ -35,15 +35,28 @@ public class UserRepo {
             return null;
         }
         for (Cookie cookie : request.getCookies()) {
-
             if (cookie.getName().equals("userId")) {
                 return findByUserId(UUID.fromString(cookie.getValue()));
             }
         }
         return null;
     }
+    public static void edit(User user) {
+        entityManager.getTransaction().begin();
+        entityManager.merge(user);
+        entityManager.getTransaction().commit();
+    }
 
-    private static User findByUserId(UUID uuid) {
+    public static void remove(UUID userId) {
+        entityManager.getTransaction().begin();
+        User user = entityManager.find(User.class, userId);
+        entityManager.remove(user);
+        entityManager.getTransaction().commit();
+    }
+
+
+
+    public static User findByUserId(UUID uuid) {
         return entityManager.find(User.class,uuid);
     }
 }

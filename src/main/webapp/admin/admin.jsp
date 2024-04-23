@@ -47,8 +47,7 @@
             <%@include file="sidebar.jsp" %>
         </nav>
         <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4">
-            <h1>Hello</h1>
-            <h4>Hello2</h4>
+            <h1>Welcome to Admin page</h1>
         </main>
     </div>
 </div>

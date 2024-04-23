@@ -28,6 +28,7 @@
         <nav class="col-md-2 col-lg-2 d-none d-md-block bg-white sidebar">
             <%@include file="sidebar.jsp" %>
         </nav>
+
         <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4 col-4 ">
 
             <div class="container mt-9">
@@ -54,7 +55,7 @@
                 <tbody>
                     <%for (Car car : cars) { %>
                             <tr>
-                                <td><img width="80" src="data:image/jpeg;base64,<%=Base64.getEncoder().encodeToString(car.getPhoto())%>">
+                                <td><img width="50" src="data:image/jpeg;base64,<%=Base64.getEncoder().encodeToString(car.getPhoto())%>">
                                 </td>
                                 <td><%=car.getName()%></td>
                                 <td><%=car.getCompany().getName()%></td>

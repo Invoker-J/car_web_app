@@ -11,6 +11,7 @@ import uz.pdp.car_web_app.entity.Car;
 import uz.pdp.car_web_app.entity.Company;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.UUID;
 
 import static uz.pdp.car_web_app.config.DBConfig.entityManager;
@@ -31,6 +32,7 @@ public class AddCarServlet extends HttpServlet {
         Car car = Car.builder()
                 .company(company)
                 .photo(bytes)
+                .carDetailList(List.of())
                 .name(name)
                 .build();
         entityManager.persist(car);

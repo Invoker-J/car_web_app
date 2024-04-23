@@ -27,7 +27,7 @@ public class User {
     private String lastName;
 
     private Integer age;
-
+    @Column(unique = true)
     private String email;
 
     private String password;
